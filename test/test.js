@@ -45,3 +45,19 @@ it("should be able to convert tabs in code", function () {
 
 	assert.equal(unindent(code, { tabSize: 4 }), unindented);
 });
+
+it("should ignore leading new lines", function () {
+	var code = [
+		'',
+		'	a',
+		'		b',
+		'	  c'
+	].join('\n');
+	var unindented = [
+		'a',
+		'    b',
+		'  c'
+	].join('\n');
+
+	assert.equal(unindent(code, { tabSize: 4 }), unindented);
+});

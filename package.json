@@ -1,0 +1,26 @@
+{
+  "name": "unindent",
+  "version": "1.0.0",
+  "description": "Remove indentations in a block of code",
+  "main": "lib/unindent.js",
+  "directories": {
+  	"lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --bail"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/curvedmark/unindent.git"
+  },
+  "keywords": [],
+  "author": "Glen Huang <curvedmark@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/curvedmark/unindent/issues"
+  },
+  "devDependencies": {
+    "mocha": "1.x"
+  }
+}

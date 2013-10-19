@@ -1,6 +1,6 @@
 {
   "name": "unindent",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Remove indentations from a block of code",
   "main": "lib/unindent.js",
   "directories": {

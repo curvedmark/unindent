@@ -1,6 +1,6 @@
 # unindent
 
-Remove indentations in a block of code
+Remove indentations from a block of code
 
 ## Installation
 
@@ -24,4 +24,5 @@ unindent(code, [opts]);
 
 * `code` - A string of code.
 * `opts` - An optional object literal support these options:
-  * `tabSize` - A number. If specified, the starting tabs of each line will be convert to spaces.
+  * `tabSize` - Number. If specified, the starting tabs of each line will be convert to spaces.
+  * `trim` - Boolean. Whether the unindented code should be trimed.

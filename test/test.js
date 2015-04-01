@@ -31,7 +31,38 @@ it("should unindent space-indented code", function () {
 	assert.equal(unindent(code), unindented);
 });
 
-it("should be able to convert tabs in code", function () {
+it("should unindent to the level of the shallowest line", function () {
+	var code = [
+		'		a',
+		'	b',
+		'	  c'
+	].join('\n');
+	var unindented = [
+		'	a',
+		'b',
+		'  c'
+	].join('\n');
+
+	assert.equal(unindent(code), unindented);
+});
+
+it("should provide an option to use only the first line's indentation", function () {
+	var code = [
+		'		a',
+		'	b',
+		'		  c'
+	].join('\n');
+	var unindented = [
+		'a',
+		'	b',
+		'  c'
+	].join('\n');
+
+	assert.equal(unindent(code, { simple: true }), unindented);
+});
+
+
+it("should be able to convert leading tabs in code", function () {
 	var code = [
 		'	a',
 		'		b',
@@ -40,6 +71,21 @@ it("should be able to convert tabs in code", function () {
 	var unindented = [
 		'a',
 		'    b',
+		'  c'
+	].join('\n');
+
+	assert.equal(unindent(code, { tabSize: 4 }), unindented);
+});
+
+it("should ignore tabs mid-line when converting", function () {
+	var code = [
+		'	a',
+		'		b	',
+		'	  c'
+	].join('\n');
+	var unindented = [
+		'a',
+		'    b	',
 		'  c'
 	].join('\n');
 

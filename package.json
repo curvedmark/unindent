@@ -1,6 +1,6 @@
 {
   "name": "unindent",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Remove indentations from a block of code",
   "main": "lib/unindent.js",
   "directories": {
@@ -16,6 +16,9 @@
   },
   "keywords": [],
   "author": "Glen Huang <curvedmark@gmail.com>",
+  "contributors": [
+    "ELLIOTTCABLE (http://ell.io/tt)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/curvedmark/unindent/issues"

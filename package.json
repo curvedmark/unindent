@@ -21,6 +21,7 @@
     "url": "https://github.com/curvedmark/unindent/issues"
   },
   "devDependencies": {
+    "debug": "~2.1",
     "mocha": "1.x"
   }
 }

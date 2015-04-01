@@ -46,6 +46,21 @@ it("should unindent to the level of the shallowest line", function () {
 	assert.equal(unindent(code), unindented);
 });
 
+it("should provide an option to use only the first line's indentation", function () {
+	var code = [
+		'		a',
+		'	b',
+		'		  c'
+	].join('\n');
+	var unindented = [
+		'a',
+		'	b',
+		'  c'
+	].join('\n');
+
+	assert.equal(unindent(code, { simple: true }), unindented);
+});
+
 
 it("should be able to convert leading tabs in code", function () {
 	var code = [
